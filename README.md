@@ -70,7 +70,6 @@
 📦 churn-prediction-project
  ┣ 📁 data
  ┣ 📁 notebooks
- ┣ 📁 models
  ┣ 📁 app
  ┣ 📄 README.md
  ┣ 📄 requirements.txt
