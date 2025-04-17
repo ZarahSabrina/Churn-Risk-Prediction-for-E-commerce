@@ -1,7 +1,0 @@
-streamlit
-langchain
-langchain-community
-ollama
-joblib
-numpy
-scikit-learn
