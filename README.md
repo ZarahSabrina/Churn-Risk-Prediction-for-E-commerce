@@ -3,7 +3,7 @@
 #  Customer Churn Prediction
 
 ## 1. Project Overview
-- **Goal:** Predict customer churn in an e-commerce setting.
+- **Goal:** Give Churn Risk Score Customer in an e-commerce.
 - **Type of Problem:** Binary classification (`Churn = 1`, `Not Churn = 0`)
 - **Business Impact:** Helps retain customers by identifying those at risk of churn.
 
@@ -13,11 +13,9 @@
 - **Missing Value Handling:** Dropped or filled with appropriate values.
 - **Feature Selection:** Removed irrelevant columns like IDs and timestamps.
 - **Feature Engineering:**
-  - Created `spending_category` from `payment_value`
   - One-hot encoding for `customer_region`
 - **Outlier Handling:** Outliers retained to preserve behavioral signals.
-- **Log Transformation:** Applied to `price` and `payment_value` to reduce skewness.
-- **Scaling:** StandardScaler used after log transformation.
+- **Log Transformation:** Applied to `mean_price` and `total_payment_value` to reduce skewness.
 
 ---
 
@@ -28,12 +26,11 @@
 ---
 
 ## 4. Model Pipeline
-- **Train-Test Split:** 80:20 with `stratify=y`
+- **Train-Test Split:** 70:30 with `stratify=y`
 - **Baseline Model:** Logistic Regression
 - **Models Evaluated:**
   - Random Forest
   - XGBoost
-  - Decision Tree
   - AdaBoost
   - CatBoost
   - Ensemble Voting (Random Forest + XGBoost)
@@ -51,12 +48,7 @@
 
 ## 6. Model Evaluation
 
-| Model                 | Recall (Test) | ROC AUC (Test) |
-|----------------------|---------------|----------------|
-| Logistic Regression  | 0.4526        | 0.5255         |
-| Random Forest        | 0.7800        | 0.8283         |
-| Tuned XGBoost        | 0.8788        | 0.7417         |
-| Ensemble             | 0.9813        | 0.6753         |
+Metrik Recall dan ROC AUC
 
 
 ✅ **Final Model:** Tuned XGBoost → Best balance between recall and generalization.
