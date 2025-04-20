@@ -11,7 +11,6 @@
 
 ## 2.  Data Preprocessing
 - **Missing Value Handling:** Dropped or filled with appropriate values.
-- **Feature Selection:** Removed irrelevant columns like IDs and timestamps.
 - **Feature Engineering:**
   - One-hot encoding for `customer_region`
 - **Outlier Handling:** Outliers retained to preserve behavioral signals.
