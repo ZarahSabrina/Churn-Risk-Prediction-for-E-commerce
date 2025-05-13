@@ -100,7 +100,7 @@ with col2:
         ]
 
         proba = model.predict_proba([features])[0][1]
-        percent = round(proba * 100, 1)
+        percent = round(proba * 100, 2)
         risk_label = classify_risk(proba)
 
         # === Output ===
@@ -134,7 +134,7 @@ with col2:
 
         <div class="bar-container">
           <div class="bar-fill"></div>
-          <div class="bar-label">{percent}%</div>
+          <div class="bar-label">{percent:.2f}%</div>
         </div>
         """, unsafe_allow_html=True)
 
