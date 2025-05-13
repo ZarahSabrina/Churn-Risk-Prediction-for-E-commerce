@@ -5,7 +5,7 @@ import joblib
 # Load model
 model_bundle = joblib.load("xgb_churn_model.joblib")
 model = model_bundle["model"]
-scaler = model_bundle["scaler"]
+scaler = model_bundle["scaler"]nnnn
 threshold = model_bundle["threshold"]
 columns = model_bundle["columns"]
 
