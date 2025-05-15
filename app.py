@@ -142,7 +142,7 @@ if uploaded_file:
             if 'customer_unique_id' in df_csv.columns:
                 preview_cols.insert(0, 'customer_unique_id')
 
-            st.dataframe(df_csv[preview_cols].style.format({"churn_proba": "{:.2f}"}).hide(axis="index"))
+            st.dataframe(df_csv[preview_cols].round(2).head(100)) 
 
             csv_out = df_csv.to_csv(index=False).encode("utf-8")
             st.download_button("📅 Download Result CSV", csv_out, "churn_predictions.csv", "text/csv")
