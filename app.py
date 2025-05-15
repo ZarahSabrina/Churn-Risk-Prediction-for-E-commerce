@@ -101,7 +101,7 @@ with col2:
         </style>
         <div class="bar-container">
           <div class="bar-fill"></div>
-          <div class="bar-label">{percent}%</div>
+          <div class="bar-label">{percent:.2f}%</div>
         </div>
         """, unsafe_allow_html=True)
 
@@ -132,8 +132,7 @@ if uploaded_file:
         else:
             X = df_csv.loc[:, columns]
             X.columns.name = None
-            df_csv["churn_proba"] = model.predict_proba(X.values)[:, 1]
-            df_csv["churn_proba"] = df_csv["churn_proba"].round(2)
+            df_csv["churn_proba"] = model.predict_proba(X.values)[:, 1].round(2)
             df_csv["churn_risk"] = df_csv["churn_proba"].apply(classify_risk)
             df_csv["recommendations"] = df_csv["churn_risk"].map(recommendation_map)
 
@@ -143,7 +142,7 @@ if uploaded_file:
             if 'customer_unique_id' in df_csv.columns:
                 preview_cols.insert(0, 'customer_unique_id')
 
-            st.dataframe(df_csv[preview_cols].round(2).head(10))
+            st.dataframe(df_csv[preview_cols].style.format({"churn_proba": "{:.2f}"}).hide(axis="index"))
 
             csv_out = df_csv.to_csv(index=False).encode("utf-8")
             st.download_button("📅 Download Result CSV", csv_out, "churn_predictions.csv", "text/csv")
