@@ -101,7 +101,7 @@ with col2:
         </style>
         <div class="bar-container">
           <div class="bar-fill"></div>
-          <div class="bar-label">{format(percent:.2f)}%</div>
+          <div class="bar-label">{percent:.2f}%</div>
         </div>
         """, unsafe_allow_html=True)
 
