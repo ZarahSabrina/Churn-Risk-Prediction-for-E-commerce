@@ -3,6 +3,19 @@ import numpy as np
 import joblib
 import pandas as pd
 
+#Set Page Config
+st.set_page_config(layout="wide")
+
+# Membuat dua kolom untuk logo dan judul
+col1, col2 = st.columns([1, 4])
+
+# Menambahkan logo di kolom pertama (kiri) dan judul di kolom kedua (kanan)
+with col1:
+    st.image("logo_ashirvada.png", width=100)  # Ganti dengan path logo kamu
+
+with col2:
+    st.title("Customer Churn Risk Predictor")
+
 # === Load Model Bundle ===
 model_bundle = joblib.load("xgb_churn_model.joblib")
 model = model_bundle["model"]
@@ -91,8 +104,6 @@ def run_prediction(mean_price, total_payment_value, avg_review_score, customer_s
         st.markdown(f"- {rec}")
 
 # === Streamlit App ===
-st.set_page_config(layout="wide")
-st.title("💡 Customer Churn Risk Predictor")
 
 tab1, tab2, tab3 = st.tabs(["🧾 Manual Input", "🔠 Input by Customer ID", "📂 Batch CSV"])
 
