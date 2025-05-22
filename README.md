@@ -4,7 +4,6 @@
 
 ## 1. Project Overview
 - **Goal:** Give Churn Risk Score Customer in an e-commerce.
-- **Type of Problem:** Binary classification (`Churn = 1`, `Not Churn = 0`)
 - **Business Impact:** Helps retain customers by identifying those at risk of churn.
 
 ---
@@ -13,7 +12,6 @@
 - **Missing Value Handling:** Dropped or filled with appropriate values.
 - **Feature Engineering:**
   - One-hot encoding for `customer_region`
-- **Outlier Handling:** Outliers retained to preserve behavioral signals.
 - **Log Transformation:** Applied to `mean_price` and `total_payment_value` to reduce skewness.
 
 ---
@@ -40,8 +38,8 @@
 - **Approach:**
   - GridSearchCV (for XGBoost)
   - RandomizedSearchCV (for Random Forest)
-- **Scoring Metric:** Recall
-- **Threshold Adjustment:** Custom threshold set to 0.4 to maximize recall
+- **Scoring Metric:** Recall 
+- **Threshold Adjustment:** Custom threshold set to 0.35 to maximize recall
 
 ---
 
