@@ -17,7 +17,7 @@
 ---
 
 ## 3. Handling Class Imbalance
-- **Issue:** Target variable imbalance (~58% churn vs 42% not churn)
+- **Issue:** Target variable imbalance (58.37% churn vs 41.63% not churn)
 - **Solution:** Used SMOTE to balance the classes in the training set.
 
 ---
