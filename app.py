@@ -110,8 +110,8 @@ tab1, tab2, tab3 = st.tabs(["🧾 Manual Input", "🔠 Input by Customer ID", "�
 # === Tab 1: Manual Input ===
 with tab1:
     st.subheader("🔧 Manual Input Prediction")
-    mean_price = st.number_input("🍒 Average Product Price", min_value=0.0)
-    total_payment_value = st.number_input("💰 Total Payment Value", min_value=0.0)
+    mean_price = st.number_input("🍒 Average Product Price ($)", min_value=0.0)
+    total_payment_value = st.number_input("💰 Total Payment Value ($)", min_value=0.0)
     avg_review_score = st.slider("⭐ Average Review Score", 1.0, 5.0, 3.0, 0.1)
     customer_state = st.selectbox("📍 Customer State", list(state_to_region.keys()))
     if st.button("🔍 Predict from Manual Input"):
