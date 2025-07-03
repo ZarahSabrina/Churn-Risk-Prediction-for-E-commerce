@@ -3,7 +3,7 @@
 #  Customer Churn Prediction
 
 ## 1. Project Overview
-- **Goal:** Give Churn Risk Score Customer in an e-commerce.
+- **Goal:** Give Churn Risk Score Prediction for  Customer in an e-commerce.
 - **Business Impact:** Helps retain customers by identifying those at risk of churn.
 
 ---
@@ -49,20 +49,6 @@ Metrik Recall dan ROC AUC
 
 
 ✅ **Final Model:** Tuned XGBoost → Best balance between recall and generalization.
-
----
-
-## 7. Version Control
-- Project managed using Git
-- Structure:
-```
-📦 churn-prediction-project
- ┣ 📁 data
- ┣ 📁 notebooks
- ┣ 📁 app
- ┣ 📄 README.md
- ┣ 📄 requirements.txt
-```
 
 ---
 
