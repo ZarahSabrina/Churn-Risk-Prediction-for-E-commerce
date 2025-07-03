@@ -2,7 +2,7 @@
 
 **🔍 Introduction**  
 
-In today’s highly competitive e-commerce landscape — especially in India — customer churn has become a serious challenge. Many customers make only one purchase and never return, making it harder for businesses to build long-term relationships. This project aims to help e-commerce businesses minimize churn and improve customer loyalty through predictive analytics.
+In today’s highly competitive e-commerce landscape, especially in India, customer churn has become a serious challenge. Many customers make only one purchase and never return, making it harder for businesses to build long-term relationships. This project aims to help e-commerce businesses minimize churn and improve customer loyalty through predictive analytics.
 
 **📌 Problem Statement**  
 
@@ -39,12 +39,11 @@ Comprehensive univariate and multivariate analyses are used to identify churn pa
   - Supports numerical and categorical data
   - Robust tuning via GridSearchCV
  
-
 **📈 Business Impact**
 
-✔️ Potential churn reduction of 16.43%
-✔️ Projected revenue retention of $4.92 million with low-cost interventions
-✔️ Significant ROI through proactive churn prediction and retention strategies
+- Potential churn reduction of 16.43%
+- Projected revenue retention of $4.92 million with low-cost interventions
+- Significant ROI through proactive churn prediction and retention strategies
 
 **📌 Deployment**
 
@@ -53,16 +52,15 @@ Comprehensive univariate and multivariate analyses are used to identify churn pa
 
 **🛠️ Tools & Tech Stack**
 
-• Python (Pandas, NumPy, Scikit-learn, XGBoost, SHAP)
-• Jupyter Notebook for EDA & modeling
-• Streamlit for app deployment
-• Google Looker Studio for dashboard & reporting
+- Python (Jupyter Notebook)
+- Streamlit for app deployment
+- Google Looker Studio for dashboard & reporting
 
 **📚 References**
 
-Saha et al. (2023). Deep churn prediction method for telecommunication industry.
-Thomas et al. (2004). Recapturing Lost Customers.
-Little & Rubin (2002). Statistical Analysis with Missing Data.
+- Saha et al. (2023). Deep churn prediction method for telecommunication industry.
+- Thomas et al. (2004). Recapturing Lost Customers.
+- Little & Rubin (2002). Statistical Analysis with Missing Data.
 
 
 ---
