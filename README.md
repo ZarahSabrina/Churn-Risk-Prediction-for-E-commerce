@@ -1,61 +1,64 @@
-# Group4-churn-prediction
+E-commerce Customer Churn Risk Prediction
+🔍 Introduction
+In today’s highly competitive e-commerce landscape — especially in India — customer churn has become a serious challenge. Many customers make only one purchase and never return, making it harder for businesses to build long-term relationships. This project aims to help e-commerce businesses minimize churn and improve customer loyalty through predictive analytics.
 
-#  Customer Churn Prediction
+📌 Problem Statement
+Based on the dataset used in this project, the churn rate is very high (58.37%). This project defines churn as no transactions within the last six months, making it easier to identify truly inactive customers. Early detection of high-risk customers is essential to maintain profitability.
 
-## 1. Project Overview
-- **Goal:** Give Churn Risk Score Prediction for  Customer in an e-commerce.
-- **Business Impact:** Helps retain customers by identifying those at risk of churn.
+🎯 Goals & Objectives
 
----
+✅ Predict customer churn risk to support personalized marketing strategies.
+✅ Segment customers based on their churn risk scores.
+✅ Uncover behavioral factors that drive churn.
+✅ Evaluate model performance with Recall ≥ 70% & ROC-AUC ≥ 70%.
+✅ Provide monthly updates to support ongoing marketing strategy improvements.
 
-## 2.  Data Preprocessing
-- **Missing Value Handling:** Dropped or filled with appropriate values.
-- **Feature Engineering:**
-  - One-hot encoding for `customer_region`
-- **Log Transformation:** Applied to `mean_price` and `total_payment_value` to reduce skewness.
+🔗 ERD & Data Pre-Processing
+This project integrates various e-commerce tables — orders, order items, customers, products, and sellers — connected through primary and foreign keys. The data pipeline handles missing values, data type conversion, and feature engineering to improve data quality and model performance.
 
----
+📊 EDA & Feature Engineering
+Comprehensive univariate and multivariate analyses are used to identify churn patterns based on region, spending category, payment type, product category, and review scores.
 
-## 3. Handling Class Imbalance
-- **Issue:** Target variable imbalance (58.37% churn vs 41.63% not churn)
-- **Solution:** Used SMOTE to balance the classes in the training set.
+⚙️ Modeling
 
----
+Model: XGBoost
 
-## 4. Model Pipeline
-- **Train-Test Split:** 70:30 with `stratify=y`
-- **Baseline Model:** Logistic Regression
-- **Models Evaluated:**
-  - Random Forest
-  - XGBoost
-  - AdaBoost
-  - CatBoost
-  - Ensemble Voting (Random Forest + XGBoost)
+Handling imbalance: SMOTE
 
----
+Evaluation metrics: Recall & ROC-AUC
 
-## 5. Hyperparameter Tuning
-- **Approach:**
-  - GridSearchCV (for XGBoost)
-  - RandomizedSearchCV (for Random Forest)
-- **Scoring Metric:** Recall 
-- **Threshold Adjustment:** Custom threshold set to 0.35 to maximize recall
+Hyperparameter tuning: GridSearchCV
 
----
+Performance: Recall 88%, ROC-AUC 71%
 
-## 6. Model Evaluation
-
-Metrik Recall dan ROC AUC
-
-
-✅ **Final Model:** Tuned XGBoost → Best balance between recall and generalization.
-
----
-
-## 8. Justification for Model Selection
+Justification for Model Selection
 - **Why XGBoost?**
   - Best recall with consistent test results
   - Well-suited for imbalanced classification
   - Supports numerical and categorical data
   - Robust tuning via GridSearchCV
  
+
+📈 Business Impact
+
+✔️ Potential churn reduction of 16.43%
+✔️ Projected revenue retention of $4.92 million with low-cost interventions
+✔️ Significant ROI through proactive churn prediction and retention strategies
+
+📌 Deployment
+
+Streamlit App: https://ashirvada-churn-risk-prediction.streamlit.app/
+
+Looker Studio Dashboard: https://lookerstudio.google.com/reporting/76834095-8e84-4141-9bed-7ea2f1757297/page/0VZKF
+
+📚 References
+
+Saha et al. (2023). Deep churn prediction method for telecommunication industry.
+
+Thomas et al. (2004). Recapturing Lost Customers.
+
+Little & Rubin (2002). Statistical Analysis with Missing Data.
+
+
+---
+
