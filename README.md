@@ -18,7 +18,7 @@ Based on the dataset used in this project, the churn rate is very high (58.37%).
 
 **🔗 ERD & Data Pre-Processing**  
 
-This project integrates various e-commerce tables — orders, order items, customers, products, and sellers — connected through primary and foreign keys. The data pipeline handles missing values, data type conversion, and feature engineering to improve data quality and model performance.
+This project integrates various e-commerce tables, such as orders, order items, customers, products, and sellers. They connected through primary and foreign keys. The data pipeline handles missing values, data type conversion, and feature engineering to improve data quality and model performance.
 
 **📊 EDA & Feature Engineering**  
 
@@ -52,7 +52,7 @@ Comprehensive univariate and multivariate analyses are used to identify churn pa
 
 **🛠️ Tools & Tech Stack**
 
-- Python (Jupyter Notebook)
+- Python (Jupyter Notebook) for data processing, EDA, and Modeling.
 - Streamlit for app deployment
 - Google Looker Studio for dashboard & reporting
 
